@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpnok2621hqd2"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_w0oco"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w0oco")
+metadata/_edit_lock_ = true
+
+[node name="CenterContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 50
+metadata/_edit_lock_ = true
+
+[node name="SceneTree" type="PanelContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CenterContainer/SceneTree"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CenterContainer/SceneTree/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Load" type="Button" parent="CenterContainer/SceneTree/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Save"
+
+[node name="Save" type="Button" parent="CenterContainer/SceneTree/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Load"
+
+[node name="RichTextLabel" type="VBoxContainer" parent="CenterContainer/SceneTree/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Label1" type="LineEdit" parent="CenterContainer/SceneTree/VBoxContainer/RichTextLabel"]
+layout_mode = 2
+text = "Go tell"
+
+[node name="Label3" type="LineEdit" parent="CenterContainer/SceneTree/VBoxContainer/RichTextLabel"]
+layout_mode = 2
+text = "KidsCanCode"
+
+[node name="Label2" type="LineEdit" parent="CenterContainer/SceneTree/VBoxContainer/RichTextLabel"]
+layout_mode = 2
+text = "how much you love this video!"
